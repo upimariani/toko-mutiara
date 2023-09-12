@@ -31,102 +31,44 @@
 							<!--change to offline or busy as needed-->
 						</div>
 						<div class="nav-profile-text d-flex flex-column pr-3">
-							<span class="font-weight-medium mb-2">Admin</span>
+							<span class="font-weight-medium mb-2">Pemilik Toko</span>
 							<span class="font-weight-normal">Selamat Datang</span>
 						</div>
 					</a>
 				</li>
 				<li class="nav-item">
-					<a class="nav-link" href="<?= base_url('Admin/cDashboard') ?>">
+					<a class="nav-link" href="<?= base_url('Pemilik/cDashboard') ?>">
 						<i class="mdi mdi-home menu-icon"></i>
 						<span class="menu-title">Dashboard</span>
 					</a>
 				</li>
 
 				<li class="nav-item">
-					<a class="nav-link" href="<?= base_url('Admin/cUser') ?>">
-						<i class="mdi mdi-contacts menu-icon"></i>
-						<span class="menu-title">Data User</span>
+					<a class="nav-link" href="<?= base_url('Pemilik/cLaporan') ?>">
+						<i class="mdi mdi-book-open menu-icon"></i>
+						<span class="menu-title">Laporan</span>
 					</a>
 				</li>
-				<li class="nav-item">
-					<a class="nav-link" href="<?= base_url('Admin/cProduk') ?>">
-						<i class="mdi mdi-format-list-bulleted menu-icon"></i>
-						<span class="menu-title">Data Produk</span>
-					</a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link" href="<?= base_url('Admin/cDiskon') ?>">
-						<i class="mdi mdi-chart-bar menu-icon"></i>
-						<span class="menu-title">Data Diskon</span>
-					</a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link" href="<?= base_url('Admin/cOngkir') ?>">
-						<i class="mdi mdi-table-large menu-icon"></i>
-						<span class="menu-title">Data Ongkir</span>
-					</a>
-				</li>
-				<li class="nav-item">
-					<span class="nav-link" href="#">
-						<span class="menu-title">Transaksi</span>
-					</span>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link" data-toggle="collapse" href="#ui-basic" aria-expanded="false" aria-controls="ui-basic">
-						<i class="mdi mdi-crosshairs-gps menu-icon"></i>
-						<span class="menu-title">Transaksi</span>
-						<i class="menu-arrow"></i>
-					</a>
-					<div class="collapse" id="ui-basic">
-						<ul class="nav flex-column sub-menu">
-							<li class="nav-item">
-								<a class="nav-link" href="<?= base_url('Admin/cTransaksi/pesanan_masuk') ?>">Pesanan Masuk</a>
-							</li>
-							<li class="nav-item">
-								<a class="nav-link" href="<?= base_url('Admin/cTransaksi/menunggu_konfirmasi') ?>">Menunggu Konfirmasi</a>
-							</li>
-							<li class="nav-item">
-								<a class="nav-link" href="<?= base_url('Admin/cTransaksi/diproses') ?>">Pesanan Diproses</a>
-							</li>
-							<li class="nav-item">
-								<a class="nav-link" href="<?= base_url('Admin/cTransaksi/dikirim') ?>">Pesanan Dikirim</a>
-							</li>
-							<li class="nav-item">
-								<a class="nav-link" href="<?= base_url('Admin/cTransaksi/selesai') ?>">Pesanan Selesai</a>
-							</li>
-						</ul>
-					</div>
-				</li>
-				<hr>
-				<li class="nav-item">
-					<span class="nav-link" href="#">
-						<span class="menu-title">Segmentasi Produk</span>
-					</span>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link" data-toggle="collapse" href="#ui-segmentasi" aria-expanded="false" aria-controls="ui-segmentasi">
-						<i class="mdi mdi-calendar menu-icon"></i>
-						<span class="menu-title">Hasil Segmentasi</span>
-						<i class="menu-arrow"></i>
-					</a>
-					<div class="collapse" id="ui-segmentasi">
-						<ul class="nav flex-column sub-menu">
-							<li class="nav-item">
-								<a class="nav-link" href="<?= base_url('Admin/cSegmentasi/pertama') ?>">Tahun 2020</a>
-							</li>
-							<li class="nav-item">
-								<a class="nav-link" href="<?= base_url('Admin/cSegmentasi/kedua') ?>">Tahun 2021</a>
-							</li>
-							<li class="nav-item">
-								<a class="nav-link" href="<?= base_url('Admin/cSegmentasi/ketiga') ?>">Tahun 2022</a>
-							</li>
-							<li class="nav-item">
-								<a class="nav-link" href="<?= base_url('Admin/cSegmentasi/keempat') ?>">Tahun 2023</a>
-							</li>
-						</ul>
-					</div>
-				</li>
+				<br>
+				<br>
+				<br>
+				<br>
+				<br>
+				<br>
+				<br>
+				<br>
+				<br>
+				<br>
+				<br>
+				<br>
+				<br>
+				<br>
+				<br>
+				<br>
+				<br>
+				<br>
+				<br>
+
 				<li class="nav-item sidebar-actions">
 					<div class="nav-link">
 						<div class="mt-4">

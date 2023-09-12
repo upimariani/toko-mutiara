@@ -41,7 +41,7 @@ class cProduk extends CI_Controller
 				);
 				$this->load->view('Admin/Layout/head');
 				$this->load->view('Admin/User/vCreateProduk', $data);
-				$this->load->view('Admin//Layout/footer');
+				$this->load->view('Admin/Layout/footer');
 			} else {
 				$upload_data = $this->upload->data();
 				$data = array(
