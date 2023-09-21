@@ -4,7 +4,7 @@
 			<h3 class="page-title">Produk</h3>
 			<div class="d-flex">
 
-				<a href="<?= base_url('Admin/cProduk/create') ?>" class="btn btn-sm ml-3 btn-success"> Add Produk </a>
+				<!-- <a href="<?= base_url('Admin/cProduk/create') ?>" class="btn btn-sm ml-3 btn-success"> Add Produk </a> -->
 			</div>
 
 		</div>
@@ -32,7 +32,7 @@
 										<th>Keterangan</th>
 										<th>Harga</th>
 										<!-- <th>Stok</th> -->
-										<th>Actions</th>
+										<!-- <th>Actions</th> -->
 									</tr>
 								</thead>
 								<tbody>
@@ -55,10 +55,10 @@
 											</td>
 											<td>Rp. <?= number_format($value->harga, 0) ?></td>
 											<!-- <td><?= $value->stok ?></td> -->
-											<td>
+											<!-- <td>
 												<a href="<?= base_url('Admin/cProduk/update/' . $value->id_produk) ?>" class="btn btn-warning"> Edit </a>
 												<a href="<?= base_url('Admin/cProduk/delete/' . $value->id_produk) ?>" class="btn btn-danger"> Hapus </a>
-											</td>
+											</td> -->
 										</tr>
 									<?php
 									}

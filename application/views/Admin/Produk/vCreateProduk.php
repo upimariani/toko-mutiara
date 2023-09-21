@@ -30,10 +30,15 @@
 							<?= form_error('harga', '<small class="form-text text-danger">', '</small>'); ?>
 						</div>
 						<div class="form-group">
+							<label for="input-4">Harga Supplier</label>
+							<input type="number" name="harga_supplier" class="form-control" id="input-4" placeholder="Masukkan Harga">
+							<?= form_error('harga_supplier', '<small class="form-text text-danger">', '</small>'); ?>
+						</div>
+						<!-- <div class="form-group">
 							<label for="input-5">Stok</label>
 							<input type="number" name="stok" class="form-control" id="input-5" placeholder="Masukkan Stok Produk">
 							<?= form_error('stok', '<small class="form-text text-danger">', '</small>'); ?>
-						</div>
+						</div> -->
 						<div class="form-group">
 							<label for="input-5">Gambar</label>
 							<input type="file" name="gambar" class="form-control" id="input-5" required>

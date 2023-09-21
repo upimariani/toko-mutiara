@@ -22,7 +22,8 @@ class cProduk extends CI_Controller
 		$this->form_validation->set_rules('nama', 'Nama Produk', 'required');
 		$this->form_validation->set_rules('keterangan', 'Keterangan Produk', 'required');
 		$this->form_validation->set_rules('harga', 'Harga Produk', 'required');
-		$this->form_validation->set_rules('stok', 'Stok Produk', 'required');
+		$this->form_validation->set_rules('harga_supplier', 'Harga Supplier Produk', 'required');
+		// $this->form_validation->set_rules('stok', 'Stok Produk', 'required');
 
 		if ($this->form_validation->run() == FALSE) {
 			$this->load->view('Admin/Layout/head');
@@ -47,7 +48,8 @@ class cProduk extends CI_Controller
 				$data = array(
 					'nama_produk' => $this->input->post('nama'),
 					'harga' => $this->input->post('harga'),
-					'stok' => $this->input->post('stok'),
+					'harga_supplier' => $this->input->post('harga_supplier'),
+					// 'stok' => $this->input->post('stok'),
 					'keterangan' => $this->input->post('keterangan'),
 					'gambar' => $upload_data['file_name'],
 					'stat_produk' => '0'
@@ -63,7 +65,9 @@ class cProduk extends CI_Controller
 		$this->form_validation->set_rules('nama', 'Nama Produk', 'required');
 		$this->form_validation->set_rules('keterangan', 'Keterangan Produk', 'required');
 		$this->form_validation->set_rules('harga', 'Harga Produk', 'required');
-		$this->form_validation->set_rules('stok', 'Stok Produk', 'required');
+		$this->form_validation->set_rules('harga_supplier', 'Harga Supplier Produk', 'required');
+
+		// $this->form_validation->set_rules('stok', 'Stok Produk', 'required');
 
 		if ($this->form_validation->run() == TRUE) {
 			$config['upload_path']          = './asset/foto-produk';
@@ -90,7 +94,8 @@ class cProduk extends CI_Controller
 				$data = array(
 					'nama_produk' => $this->input->post('nama'),
 					'harga' => $this->input->post('harga'),
-					'stok' => $this->input->post('stok'),
+					'harga_supplier' => $this->input->post('harga_supplier'),
+					// 'stok' => $this->input->post('stok'),
 					'keterangan' => $this->input->post('keterangan'),
 					'gambar' => $upload_data['file_name']
 				);
@@ -101,7 +106,8 @@ class cProduk extends CI_Controller
 			$data = array(
 				'nama_produk' => $this->input->post('nama'),
 				'harga' => $this->input->post('harga'),
-				'stok' => $this->input->post('stok'),
+				'harga_supplier' => $this->input->post('harga_supplier'),
+				// 'stok' => $this->input->post('stok'),
 				'keterangan' => $this->input->post('keterangan')
 			);
 			$this->mProduk->update($id, $data);

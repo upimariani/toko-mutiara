@@ -10,6 +10,10 @@ class mDashboard extends CI_Model
 		$data['produk_tidaklaku'] = $this->db->query("SELECT COUNT(id_produk) as jml FROM `produk` WHERE stat_produk='0'")->row();
 		return $data;
 	}
+	public function segmentasi()
+	{
+		return $this->db->query("SELECT * FROM `produk`")->result();
+	}
 }
 
 /* End of file mDashboard.php */

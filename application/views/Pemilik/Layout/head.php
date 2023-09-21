@@ -42,7 +42,30 @@
 						<span class="menu-title">Dashboard</span>
 					</a>
 				</li>
-
+				<li class="nav-item">
+					<a class="nav-link" href="<?= base_url('Pemilik/cUser') ?>">
+						<i class="mdi mdi-contacts menu-icon"></i>
+						<span class="menu-title">Data User</span>
+					</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="<?= base_url('Pemilik/cProduk') ?>">
+						<i class="mdi mdi-format-list-bulleted menu-icon"></i>
+						<span class="menu-title">Data Produk</span>
+					</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="<?= base_url('Pemilik/cDiskon') ?>">
+						<i class="mdi mdi-chart-bar menu-icon"></i>
+						<span class="menu-title">Data Diskon</span>
+					</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="<?= base_url('Pemilik/cOngkir') ?>">
+						<i class="mdi mdi-table-large menu-icon"></i>
+						<span class="menu-title">Data Ongkir</span>
+					</a>
+				</li>
 				<li class="nav-item">
 					<a class="nav-link" href="<?= base_url('Pemilik/cLaporan') ?>">
 						<i class="mdi mdi-book-open menu-icon"></i>

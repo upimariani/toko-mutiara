@@ -9,12 +9,14 @@ class cDashboard extends CI_Controller
 	{
 		parent::__construct();
 		$this->load->model('mDashboard');
+		$this->load->model('mSegmentasi');
 	}
 
 	public function index()
 	{
 		$data = array(
-			'total' => $this->mDashboard->dashboard_admin()
+			'produk' => $this->mDashboard->segmentasi(),
+			'segmentasi' => $this->mSegmentasi->variabel()
 		);
 		$this->load->view('Admin/Layout/head');
 		$this->load->view('Admin/vDashboard', $data);

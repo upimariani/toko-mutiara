@@ -11,6 +11,19 @@ class mSegmentasi extends CI_Model
 		$this->db->where('thn_periode', $tahun);
 		return $this->db->get()->result();
 	}
+
+	public function variabel()
+	{
+		return $this->db->query("SELECT nama_produk, stat_produk, produk.id_produk, SUM(qty) as qty, SUM(qty)*harga as netsales, SUM(qty)*harga_supplier as costprice  FROM `detail_transaksi` JOIN produk ON produk.id_produk = detail_transaksi.id_produk GROUP BY produk.id_produk")->result();
+	}
+	public function limit_asc()
+	{
+		return $this->db->query("SELECT produk.id_produk, SUM(qty) as qty, SUM(qty)*harga as netsales, SUM(qty)*harga_supplier as costprice  FROM `detail_transaksi` JOIN produk ON produk.id_produk = detail_transaksi.id_produk GROUP BY produk.id_produk ORDER BY produk.id_produk asc")->result();
+	}
+	public function limit_desc()
+	{
+		return $this->db->query("SELECT produk.id_produk,SUM(qty) as qty, SUM(qty)*harga as netsales, SUM(qty)*harga_supplier as costprice  FROM `detail_transaksi` JOIN produk ON produk.id_produk = detail_transaksi.id_produk GROUP BY produk.id_produk ORDER BY produk.id_produk desc")->result();
+	}
 }
 
 /* End of file mSegmentasi.php */
