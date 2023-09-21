@@ -1736,7 +1736,7 @@
 		data: {
 			labels: <?= json_encode($produk_in) ?>,
 			datasets: [{
-				label: 'Grafik Profit Produk 2022',
+				label: 'Grafik Profit Produk 2023',
 				data: <?= json_encode($profit_in) ?>,
 				backgroundColor: [
 					'rgba(128, 128, 128, 1)',

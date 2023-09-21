@@ -89,15 +89,6 @@
 				<br>
 				<br>
 				<br>
-				<br>
-				<br>
-				<br>
-				<br>
-				<br>
-				<br>
-				<br>
-				<br>
-				<br>
 
 				<li class="nav-item sidebar-actions">
 					<div class="nav-link">
