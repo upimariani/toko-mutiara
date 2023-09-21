@@ -18,10 +18,10 @@
 <body>
 	<div class="container-scroller">
 		<nav class="sidebar sidebar-offcanvas" id="sidebar">
-			<div class="text-center sidebar-brand-wrapper d-flex align-items-center">
+			<!-- <div class="text-center sidebar-brand-wrapper d-flex align-items-center">
 				<a class="sidebar-brand brand-logo" href="index.html"><img src="<?= base_url('asset/admin/template/') ?>assets/images/logo.svg" alt="logo" /></a>
 				<a class="sidebar-brand brand-logo-mini pl-4 pt-3" href="index.html"><img src="<?= base_url('asset/admin/template/') ?>assets/images/logo-mini.svg" alt="logo" /></a>
-			</div>
+			</div> -->
 			<ul class="nav">
 				<li class="nav-item nav-profile">
 					<a href="#" class="nav-link">
@@ -46,7 +46,14 @@
 				<li class="nav-item">
 					<a class="nav-link" href="<?= base_url('Pemilik/cLaporan') ?>">
 						<i class="mdi mdi-book-open menu-icon"></i>
-						<span class="menu-title">Laporan</span>
+						<span class="menu-title">Laporan Transaksi</span>
+					</a>
+				</li>
+
+				<li class="nav-item">
+					<a class="nav-link" href="<?= base_url('Pemilik/cLaporanSegmentasi') ?>">
+						<i class="mdi mdi-chart-pie menu-icon"></i>
+						<span class="menu-title">Segmentasi Produk</span>
 					</a>
 				</li>
 				<br>

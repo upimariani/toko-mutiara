@@ -23,34 +23,7 @@
 							</div>
 						</div>
 					</div>
-					<div class="col-xl-12 col-md-6 stretch-card grid-margin grid-margin-sm-0 pb-sm-3">
-						<div class="card bg-danger">
-							<div class="card-body px-3 py-4">
-								<div class="d-flex justify-content-between align-items-start">
-									<div class="color-card">
-										<p class="mb-0 color-card-head">Total Produk Laku</p>
-										<h2 class="text-white"> <?= $total['produk_laku']->jml ?><span class="h5">item</span>
-										</h2>
-									</div>
-									<i class="card-icon-indicator mdi mdi-cube-outline bg-inverse-icon-danger"></i>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="col-xl-12 col-md-6 stretch-card grid-margin grid-margin-sm-0 pb-sm-3 pb-lg-0 pb-xl-3">
-						<div class="card bg-primary">
-							<div class="card-body px-3 py-4">
-								<div class="d-flex justify-content-between align-items-start">
-									<div class="color-card">
-										<p class="mb-0 color-card-head">Total Produk Tidak Laku</p>
-										<h2 class="text-white"> <?= $total['produk_tidaklaku']->jml ?><span class="h5">item</span>
-										</h2>
-									</div>
-									<i class="card-icon-indicator mdi mdi-briefcase-outline bg-inverse-icon-primary"></i>
-								</div>
-							</div>
-						</div>
-					</div>
+
 
 				</div>
 			</div>

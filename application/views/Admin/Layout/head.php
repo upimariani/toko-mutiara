@@ -18,10 +18,10 @@
 <body>
 	<div class="container-scroller">
 		<nav class="sidebar sidebar-offcanvas" id="sidebar">
-			<div class="text-center sidebar-brand-wrapper d-flex align-items-center">
+			<!-- <div class="text-center sidebar-brand-wrapper d-flex align-items-center">
 				<a class="sidebar-brand brand-logo" href="index.html"><img src="<?= base_url('asset/admin/template/') ?>assets/images/logo.svg" alt="logo" /></a>
 				<a class="sidebar-brand brand-logo-mini pl-4 pt-3" href="index.html"><img src="<?= base_url('asset/admin/template/') ?>assets/images/logo-mini.svg" alt="logo" /></a>
-			</div>
+			</div> -->
 			<ul class="nav">
 				<li class="nav-item nav-profile">
 					<a href="#" class="nav-link">
@@ -120,9 +120,6 @@
 							</li>
 							<li class="nav-item">
 								<a class="nav-link" href="<?= base_url('Admin/cSegmentasi/ketiga') ?>">Tahun 2022</a>
-							</li>
-							<li class="nav-item">
-								<a class="nav-link" href="<?= base_url('Admin/cSegmentasi/keempat') ?>">Tahun 2023</a>
 							</li>
 						</ul>
 					</div>
