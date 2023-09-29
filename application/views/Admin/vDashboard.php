@@ -22,13 +22,17 @@
 						<div class="d-flex justify-content-between align-items-start">
 							<div class="color-card">
 								<?php
-								$total_tdk_laku = $this->db->query("SELECT COUNT(id_produk) as jml FROM `produk` WHERE stat_produk='0'")->row();
+								$total_tdk_laku = $this->db->query("SELECT COUNT(id_produk) as jml, stat_produk FROM `produk` WHERE stat_produk='0'")->row();
 								?>
-								<p class="mb-0 color-card-head">Produk Tidak Laku</p>
+								<a href="<?= base_url('Admin/cDashboard/detail_segmentasi/' . $total_tdk_laku->stat_produk) ?>">
+									<p class="mb-0 color-card-head">Produk Tidak Laku</p>
+								</a>
+
 								<h2 class="text-white"> <?= $total_tdk_laku->jml ?> <span class="h5"> produk</span>
 								</h2>
 							</div>
 							<i class="card-icon-indicator mdi mdi-alert-outline bg-inverse-icon-danger"></i>
+
 						</div>
 						<h6 class="text-white"><?= ($total_tdk_laku->jml / 150) * 100 ?>% dari Total Barang</h6>
 					</div>
@@ -40,9 +44,12 @@
 						<div class="d-flex justify-content-between align-items-start">
 							<div class="color-card">
 								<?php
-								$total_laku = $this->db->query("SELECT COUNT(id_produk) as jml FROM `produk` WHERE stat_produk='1'")->row();
+								$total_laku = $this->db->query("SELECT COUNT(id_produk) as jml, stat_produk FROM `produk` WHERE stat_produk='1'")->row();
 								?>
-								<p class="mb-0 color-card-head">Produk Laku</p>
+								<a href="<?= base_url('Admin/cDashboard/detail_segmentasi/' . $total_laku->stat_produk) ?>">
+									<p class="mb-0 color-card-head">Produk Laku</p>
+								</a>
+
 								<h2 class="text-white"> <?= $total_laku->jml ?> <span class="h5"> produk</span>
 								</h2>
 							</div>

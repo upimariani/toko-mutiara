@@ -18,6 +18,16 @@ class cSegmentasi extends CI_Controller
 		$this->load->view('Admin/Segmentasi/vSegmentasiPertama', $data);
 		$this->load->view('Admin/Layout/footer');
 	}
+	public function detail_pertama($status)
+	{
+		$tahun = '2020';
+		$data = array(
+			'detail_segmentasi' => $this->mSegmentasi->detail_variabel($status, $tahun)
+		);
+		$this->load->view('Admin/Layout/head');
+		$this->load->view('Admin/Segmentasi/vDetailSegmentasiPertama', $data);
+		$this->load->view('Admin/Layout/footer');
+	}
 	public function kedua()
 	{
 		$tahun = '2021';
@@ -28,6 +38,16 @@ class cSegmentasi extends CI_Controller
 		$this->load->view('Admin/Segmentasi/vSegmentasiKedua', $data);
 		$this->load->view('Admin/Layout/footer');
 	}
+	public function detail_kedua($status)
+	{
+		$tahun = '2021';
+		$data = array(
+			'detail_segmentasi' => $this->mSegmentasi->detail_variabel($status, $tahun)
+		);
+		$this->load->view('Admin/Layout/head');
+		$this->load->view('Admin/Segmentasi/vDetailSegmentasiKedua', $data);
+		$this->load->view('Admin/Layout/footer');
+	}
 	public function ketiga()
 	{
 		$tahun = '2022';
@@ -36,6 +56,16 @@ class cSegmentasi extends CI_Controller
 		);
 		$this->load->view('Admin/Layout/head');
 		$this->load->view('Admin/Segmentasi/vSegmentasiKetiga', $data);
+		$this->load->view('Admin/Layout/footer');
+	}
+	public function detail_ketiga($status)
+	{
+		$tahun = '2022';
+		$data = array(
+			'detail_segmentasi' => $this->mSegmentasi->detail_variabel($status, $tahun)
+		);
+		$this->load->view('Admin/Layout/head');
+		$this->load->view('Admin/Segmentasi/vDetailSegmentasiKetiga', $data);
 		$this->load->view('Admin/Layout/footer');
 	}
 }

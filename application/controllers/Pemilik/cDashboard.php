@@ -21,6 +21,15 @@ class cDashboard extends CI_Controller
 		$this->load->view('Pemilik/vDashboard', $data);
 		$this->load->view('Pemilik/Layout/footer');
 	}
+	public function detail_segmentasi($status)
+	{
+		$data = array(
+			'detail_segmentasi' => $this->mDashboard->detail_segmentasi($status)
+		);
+		$this->load->view('Pemilik/Layout/head');
+		$this->load->view('Pemilik/vDetailSegmentasi', $data);
+		$this->load->view('Pemilik/Layout/footer');
+	}
 }
 
 /* End of file cDashboard.php */

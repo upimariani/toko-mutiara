@@ -21,9 +21,11 @@
 						<div class="d-flex justify-content-between align-items-start">
 							<div class="color-card">
 								<?php
-								$total_tdk_laku = $this->db->query("SELECT COUNT(id_analisis) as jml FROM `analisis` WHERE thn_periode='2022' AND status='1'")->row();
+								$total_tdk_laku = $this->db->query("SELECT COUNT(id_analisis) as jml, status FROM `analisis` WHERE thn_periode='2022' AND status='1'")->row();
 								?>
-								<p class="mb-0 color-card-head">Produk Tidak Laku</p>
+								<a href="<?= base_url('Admin/cSegmentasi/detail_ketiga/' . $total_tdk_laku->status) ?>">
+									<p class="mb-0 color-card-head">Produk Tidak Laku</p>
+								</a>
 								<h2 class="text-white"> <?= $total_tdk_laku->jml ?> <span class="h5"> produk</span>
 								</h2>
 							</div>
@@ -39,9 +41,11 @@
 						<div class="d-flex justify-content-between align-items-start">
 							<div class="color-card">
 								<?php
-								$total_laku = $this->db->query("SELECT COUNT(id_analisis) as jml FROM `analisis` WHERE thn_periode='2022' AND status='2'")->row();
+								$total_laku = $this->db->query("SELECT COUNT(id_analisis) as jml, status FROM `analisis` WHERE thn_periode='2022' AND status='2'")->row();
 								?>
-								<p class="mb-0 color-card-head">Produk Laku</p>
+								<a href="<?= base_url('Admin/cSegmentasi/detail_ketiga/' . $total_laku->status) ?>">
+									<p class="mb-0 color-card-head">Produk Laku</p>
+								</a>
 								<h2 class="text-white"> <?= $total_laku->jml ?> <span class="h5"> produk</span>
 								</h2>
 							</div>

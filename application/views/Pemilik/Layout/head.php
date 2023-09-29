@@ -66,12 +66,12 @@
 						<span class="menu-title">Data Ongkir</span>
 					</a>
 				</li>
-				<li class="nav-item">
+				<!-- <li class="nav-item">
 					<a class="nav-link" href="<?= base_url('Pemilik/cLaporan') ?>">
 						<i class="mdi mdi-book-open menu-icon"></i>
 						<span class="menu-title">Laporan Transaksi</span>
 					</a>
-				</li>
+				</li> -->
 
 				<li class="nav-item">
 					<a class="nav-link" href="<?= base_url('Pemilik/cLaporanSegmentasi') ?>">
