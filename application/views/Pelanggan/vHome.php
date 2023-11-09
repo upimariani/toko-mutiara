@@ -89,16 +89,15 @@
 			foreach ($produk as $key => $value) {
 			?>
 				<!-- Start Column 2 -->
-				<div class="col-12 col-md-4 col-lg-3 mb-5 mb-md-0">
+				<div class="col-12 col-md-4 col-lg-3 mb-5 mb-md-0 mt-5">
 					<form action="<?= base_url('pelanggan/chome/cart') ?>" method="POST">
 						<input type="hidden" name="id" value="<?= $value->id_produk ?>">
 						<input type="hidden" name="name" value="<?= $value->nama_produk ?>">
 						<input type="hidden" name="price" value="<?= $value->harga ?>">
 						<input type="hidden" name="qty" value="1">
 						<input type="hidden" name="picture" value="<?= $value->gambar ?>">
-						<input type="hidden" name="stok" value="<?= $value->stok ?>">
 						<a class="product-item" href="#">
-							<img src="<?= base_url('asset/foto-produk/' . $value->gambar) ?>" class="img-fluid product-thumbnail">
+							<img style="width: 250px;" src="<?= base_url('asset/foto-produk/' . $value->gambar) ?>" class="img-fluid product-thumbnail">
 							<h3 class="product-title"><?= $value->nama_produk ?></h3>
 							<strong class="product-price">Rp. <?= number_format($value->harga - ($value->diskon / 100 * $value->harga)) ?><?php if ($value->diskon != NULL) {
 																																			?>

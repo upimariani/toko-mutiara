@@ -26,8 +26,7 @@ class cHome extends CI_Controller
 			'name' => $this->input->post('name'),
 			'price' => $this->input->post('price'),
 			'qty' => $this->input->post('qty'),
-			'picture' => $this->input->post('picture'),
-			'stok' => $this->input->post('stok')
+			'picture' => $this->input->post('picture')
 		);
 		$this->cart->insert($data);
 		redirect('pelanggan/chome');

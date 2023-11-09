@@ -113,13 +113,13 @@
 					<div class="collapse" id="ui-segmentasi">
 						<ul class="nav flex-column sub-menu">
 							<li class="nav-item">
-								<a class="nav-link" href="<?= base_url('Admin/cSegmentasi/pertama') ?>">Tahun 2020</a>
+								<a class="nav-link" href="<?= base_url('Admin/cSegmentasi/data_pertama') ?>">Tahun 2020</a>
 							</li>
 							<li class="nav-item">
-								<a class="nav-link" href="<?= base_url('Admin/cSegmentasi/kedua') ?>">Tahun 2021</a>
+								<a class="nav-link" href="<?= base_url('Admin/cSegmentasi/data_kedua') ?>">Tahun 2021</a>
 							</li>
 							<li class="nav-item">
-								<a class="nav-link" href="<?= base_url('Admin/cSegmentasi/ketiga') ?>">Tahun 2022</a>
+								<a class="nav-link" href="<?= base_url('Admin/cSegmentasi/data_ketiga') ?>">Tahun 2022</a>
 							</li>
 						</ul>
 					</div>

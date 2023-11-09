@@ -75,21 +75,34 @@
 
 				<li class="nav-item">
 					<a class="nav-link" href="<?= base_url('Pemilik/cLaporanSegmentasi') ?>">
-						<i class="mdi mdi-chart-pie menu-icon"></i>
-						<span class="menu-title">Segmentasi Produk</span>
+						<i class="mdi mdi-book menu-icon"></i>
+						<span class="menu-title">Laporan Segmentasi</span>
 					</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" data-toggle="collapse" href="#ui-segmentasi" aria-expanded="false" aria-controls="ui-segmentasi">
+						<i class="mdi mdi-calendar menu-icon"></i>
+						<span class="menu-title">Hasil Segmentasi</span>
+						<i class="menu-arrow"></i>
+					</a>
+					<div class="collapse" id="ui-segmentasi">
+						<ul class="nav flex-column sub-menu">
+							<li class="nav-item">
+								<a class="nav-link" href="<?= base_url('Pemilik/cSegmentasi/data_pertama') ?>">Tahun 2020</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="<?= base_url('Pemilik/cSegmentasi/data_kedua') ?>">Tahun 2021</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="<?= base_url('Pemilik/cSegmentasi/data_ketiga') ?>">Tahun 2022</a>
+							</li>
+						</ul>
+					</div>
 				</li>
 				<br>
 				<br>
 				<br>
 				<br>
-				<br>
-				<br>
-				<br>
-				<br>
-				<br>
-				<br>
-
 				<li class="nav-item sidebar-actions">
 					<div class="nav-link">
 						<div class="mt-4">

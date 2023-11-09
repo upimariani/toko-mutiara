@@ -1,0 +1,72 @@
+<div class="main-panel">
+	<div class="content-wrapper">
+		<div class="page-header">
+			<h3 class="page-title">Analisis Segmentasi Produk Tahun 2021</h3>
+
+			<a href="<?= base_url('Admin/cSegmentasi/kedua') ?>" class="btn btn-success">Detail Analisis</a>
+
+		</div>
+		<?php
+		if ($this->session->userdata('success')) {
+		?>
+			<div class="alert alert-success alert-dismissible" role="alert">
+				<?= $this->session->userdata('success') ?>
+			</div>
+		<?php
+		}
+		?>
+		<div class="row">
+
+			<div class="col-lg-12 grid-margin stretch-card">
+				<div class="card">
+					<div class="card-body">
+						<h4 class="card-title">Informasi Produk</h4>
+						<form action="<?= base_url('Admin/cSegmentasi/import_excel'); ?>" method="post" enctype="multipart/form-data">
+							<div class="form-group">
+								<label>Pilih File Excel</label>
+								<input class="form-control" type="file" name="fileExcel">
+							</div>
+							<div>
+								<button class='btn btn-success' type="submit">
+									<span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+									Import
+								</button>
+							</div>
+						</form>
+						</p>
+						<div class="table-responsive">
+							<table id="myTable" class="table table-striped">
+								<thead>
+									<tr>
+										<th>No</th>
+										<th>Nama Produk </th>
+										<th>Quantity Keluar</th>
+										<th>Netsale</th>
+										<th>Profit</th>
+									</tr>
+								</thead>
+								<tbody>
+									<?php
+									$no = 1;
+									foreach ($segmentasi as $key => $value) {
+									?>
+										<tr>
+											<td><?= $no++ ?>.</td>
+											<td><i class="fab fa-angular fa-lg text-danger me-3"></i> <strong><?= $value->nama_produk ?></strong></td>
+											<td><?= $value->qty_keluar ?></td>
+											<td>Rp. <?= number_format($value->netsale, 0) ?></td>
+											<td>Rp. <?= number_format($value->profit, 0) ?></td>
+
+										</tr>
+									<?php
+									}
+									?>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</div>
+			</div>
+
+		</div>
+	</div>

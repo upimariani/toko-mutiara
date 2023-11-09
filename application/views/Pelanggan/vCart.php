@@ -55,7 +55,7 @@ if ($this->session->userdata('success')) {
 									<td><img style="width: 150px;" class="rounded-circle" src="<?= base_url('asset/foto-produk/' . $value['picture']) ?>"></td>
 									<td><?= $value['name'] ?></td>
 									<td>
-										<input class="form-control" name="<?= $i . '[qty]' ?>" max="<?= $value['stok'] ?>" min="1" type="number" value="<?= $value['qty'] ?>">
+										<input class="form-control" name="<?= $i . '[qty]' ?>" min="1" type="number" value="<?= $value['qty'] ?>">
 
 									</td>
 									<td>Rp. <?= number_format($value['price'], 0)  ?></td>

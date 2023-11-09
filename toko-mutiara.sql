@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Sep 22, 2023 at 01:10 AM
--- Server version: 10.4.6-MariaDB
--- PHP Version: 7.3.9
+-- Waktu pembuatan: 05 Okt 2023 pada 16.06
+-- Versi server: 10.4.6-MariaDB
+-- Versi PHP: 7.3.9
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -25,7 +25,7 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Table structure for table `analisis`
+-- Struktur dari tabel `analisis`
 --
 
 CREATE TABLE `analisis` (
@@ -40,7 +40,7 @@ CREATE TABLE `analisis` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `analisis`
+-- Dumping data untuk tabel `analisis`
 --
 
 INSERT INTO `analisis` (`id_analisis`, `id_produk`, `thn_periode`, `qty_keluar`, `netsale`, `profit`, `hasil`, `status`) VALUES
@@ -498,7 +498,7 @@ INSERT INTO `analisis` (`id_analisis`, `id_produk`, `thn_periode`, `qty_keluar`,
 -- --------------------------------------------------------
 
 --
--- Table structure for table `detail_transaksi`
+-- Struktur dari tabel `detail_transaksi`
 --
 
 CREATE TABLE `detail_transaksi` (
@@ -509,7 +509,7 @@ CREATE TABLE `detail_transaksi` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `detail_transaksi`
+-- Dumping data untuk tabel `detail_transaksi`
 --
 
 INSERT INTO `detail_transaksi` (`id_detail`, `id_transaksi`, `id_produk`, `qty`) VALUES
@@ -521,7 +521,7 @@ INSERT INTO `detail_transaksi` (`id_detail`, `id_transaksi`, `id_produk`, `qty`)
 -- --------------------------------------------------------
 
 --
--- Table structure for table `diskon`
+-- Struktur dari tabel `diskon`
 --
 
 CREATE TABLE `diskon` (
@@ -533,7 +533,7 @@ CREATE TABLE `diskon` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `diskon`
+-- Dumping data untuk tabel `diskon`
 --
 
 INSERT INTO `diskon` (`id_diskon`, `id_produk`, `nama_diskon`, `diskon`, `tgl_diskon`) VALUES
@@ -542,7 +542,7 @@ INSERT INTO `diskon` (`id_diskon`, `id_produk`, `nama_diskon`, `diskon`, `tgl_di
 -- --------------------------------------------------------
 
 --
--- Table structure for table `ongkir`
+-- Struktur dari tabel `ongkir`
 --
 
 CREATE TABLE `ongkir` (
@@ -552,7 +552,7 @@ CREATE TABLE `ongkir` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `ongkir`
+-- Dumping data untuk tabel `ongkir`
 --
 
 INSERT INTO `ongkir` (`id_ongkir`, `nama_kecamatan`, `ongkir`) VALUES
@@ -561,7 +561,7 @@ INSERT INTO `ongkir` (`id_ongkir`, `nama_kecamatan`, `ongkir`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `pelanggan`
+-- Struktur dari tabel `pelanggan`
 --
 
 CREATE TABLE `pelanggan` (
@@ -574,7 +574,7 @@ CREATE TABLE `pelanggan` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `pelanggan`
+-- Dumping data untuk tabel `pelanggan`
 --
 
 INSERT INTO `pelanggan` (`id_pelanggan`, `nama`, `alamat`, `no_hp`, `username`, `password`) VALUES
@@ -583,7 +583,7 @@ INSERT INTO `pelanggan` (`id_pelanggan`, `nama`, `alamat`, `no_hp`, `username`, 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `produk`
+-- Struktur dari tabel `produk`
 --
 
 CREATE TABLE `produk` (
@@ -593,171 +593,170 @@ CREATE TABLE `produk` (
   `keterangan` varchar(20) NOT NULL,
   `harga` varchar(15) NOT NULL,
   `harga_supplier` varchar(30) NOT NULL,
-  `stok` int(11) NOT NULL,
   `stat_produk` int(11) NOT NULL,
   `gambar` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `produk`
+-- Dumping data untuk tabel `produk`
 --
 
-INSERT INTO `produk` (`id_produk`, `id_user`, `nama_produk`, `keterangan`, `harga`, `harga_supplier`, `stok`, `stat_produk`, `gambar`) VALUES
-(1, 1, 'Gula Psr Lokal I/2kg', 'kg', '35816', '37607', 40, 0, 'blank-profile-picture-973460_1280.png'),
-(2, 1, 'Mb.Minyak Telon Pls 85', 'liter', '12592', '13222', 101, 0, 'blank-profile-picture-973460_1280.png'),
-(3, 1, 'Indomilk Kids Ckl 115m', 'ml', '10602', '11132', 146, 1, 'blank-profile-picture-973460_1280.png'),
-(4, 1, 'Indomie Aym Bwg 69g', 'gram', '12578', '13207', 35, 0, 'blank-profile-picture-973460_1280.png'),
-(5, 1, 'Masker S Polos', 'pcs', '29871', '31365', 48, 0, 'blank-profile-picture-973460_1280.png'),
-(6, 1, 'Real Good S.Choco 60ml', 'ml', '32270', '33884', 50, 0, 'blank-profile-picture-973460_1280.png'),
-(7, 1, 'Fresco Kopi Cream 10\'s', 'pcs', '11626', '12207', 170, 0, 'blank-profile-picture-973460_1280.png'),
-(8, 1, 'Paramex 4\'s', 'pcs', '44671', '46905', 113, 0, 'blank-profile-picture-973460_1280.png'),
-(9, 1, 'Garuda Rosta Rs Bwng 25g', 'gram', '30123', '31629', 195, 0, 'blank-profile-picture-973460_1280.png'),
-(10, 1, 'Eskulin Shp Donald 45ml', 'ml', '49669', '52152', 105, 0, 'blank-profile-picture-973460_1280.png'),
-(11, 1, 'Dancow 3+Pbio3 Madu 200g', 'gram', '28044', '29446', 46, 0, 'blank-profile-picture-973460_1280.png'),
-(12, 1, 'Oishi Panchos Jg Pds 160', 'pcs', '39264', '41227', 78, 0, 'blank-profile-picture-973460_1280.png'),
-(13, 1, 'Lifebuoy Bw Cool 450ml Rf', 'ml', '25570', '26849', 100, 0, 'blank-profile-picture-973460_1280.png'),
-(14, 1, 'Kuas Pagoda 7.8', 'pcs', '25711', '26997', 147, 0, 'blank-profile-picture-973460_1280.png'),
-(15, 1, 'Popok Alan B Era', 'pcs', '26944', '28291', 187, 0, 'blank-profile-picture-973460_1280.png'),
-(16, 1, 'Walls Populer Cho Van', 'pcs', '15566', '16344', 51, 0, 'blank-profile-picture-973460_1280.png'),
-(17, 1, 'Moko Moko M19', 'pcs', '17713', '18599', 146, 0, 'blank-profile-picture-973460_1280.png'),
-(18, 1, 'Oskadon Sp/4 Tab', 'pcs', '38257', '40170', 166, 0, 'blank-profile-picture-973460_1280.png'),
-(19, 1, 'Sabun L.Buaya 900p', 'pcs', '21065', '22118', 86, 0, 'blank-profile-picture-973460_1280.png'),
-(20, 1, 'Kopi K.Api Spc Mix25g*10\'s', 'pcs', '20390', '21410', 141, 0, 'blank-profile-picture-973460_1280.png'),
-(21, 1, 'Pudding Susu Strw 145g', 'gram', '27613', '28994', 168, 0, 'blank-profile-picture-973460_1280.png'),
-(22, 1, 'Okky J.Drink Bblgum', 'pcs', '35040', '36792', 91, 0, 'blank-profile-picture-973460_1280.png'),
-(23, 1, 'Teh Rio Gula Bt 200m', 'ml', '36658', '38491', 195, 0, 'blank-profile-picture-973460_1280.png'),
-(24, 1, 'Cutter Jk A 300a', 'pcs', '31967', '33565', 42, 0, 'blank-profile-picture-973460_1280.png'),
-(25, 1, 'Ekonomi E2k Kantong', 'pcs', '20661', '21694', 186, 0, 'blank-profile-picture-973460_1280.png'),
-(26, 1, 'Kertas Kado Kiki Kcl', 'pcs', '22728', '23864', 40, 0, 'blank-profile-picture-973460_1280.png'),
-(27, 1, 'Torabika Creamy Latte', 'pcs', '22319', '23435', 22, 0, 'blank-profile-picture-973460_1280.png'),
-(28, 1, 'Promina Puff Str+Apl 15', 'pcs', '41751', '43839', 141, 0, 'blank-profile-picture-973460_1280.png'),
-(29, 1, 'Wcc Pudding Guava 120gr', 'gram', '14036', '14738', 143, 0, 'blank-profile-picture-973460_1280.png'),
-(30, 1, 'Oreo Coklat 38g', 'gram', '25646', '26928', 47, 0, 'blank-profile-picture-973460_1280.png'),
-(31, 1, 'Djarum Coklat 12', 'pcs', '43362', '45530', 105, 0, 'blank-profile-picture-973460_1280.png'),
-(32, 1, 'Richees Rol Kj 43gr', 'gram', '17420', '18291', 117, 0, 'blank-profile-picture-973460_1280.png'),
-(33, 1, 'Kecap Abc Mns 275m', 'ml', '21842', '22934', 132, 0, 'blank-profile-picture-973460_1280.png'),
-(34, 1, 'Madu Tj Super 250g', 'gram', '35938', '37735', 86, 0, 'blank-profile-picture-973460_1280.png'),
-(35, 1, 'Sania Mg 2lt Pch', 'liter', '24564', '25792', 45, 0, 'blank-profile-picture-973460_1280.png'),
-(36, 1, 'Filma Mgrn Salt 200g', 'gram', '35965', '37763', 133, 0, 'blank-profile-picture-973460_1280.png'),
-(37, 1, 'Uleg Sbl Rawit 20g/Pak', 'pak', '38663', '40596', 142, 0, 'blank-profile-picture-973460_1280.png'),
-(38, 1, 'Indomie Grg Rendang', 'pcs', '35662', '37445', 110, 0, 'blank-profile-picture-973460_1280.png'),
-(39, 1, 'Indomie Grg Iga Penyet', 'pcs', '16663', '17496', 61, 0, 'blank-profile-picture-973460_1280.png'),
-(40, 1, 'Shinzui Soap Myori 90gr', 'gram', '35104', '36859', 165, 0, 'blank-profile-picture-973460_1280.png'),
-(41, 1, 'Hufagripp Tmp 60ml', 'ml', '31079', '32633', 176, 0, 'blank-profile-picture-973460_1280.png'),
-(42, 1, 'Frestea Jasmine Cup 300ml', 'ml', '33152', '34810', 39, 0, 'blank-profile-picture-973460_1280.png'),
-(43, 1, 'Aircup Btl 600ml', 'ml', '32657', '34290', 143, 0, 'blank-profile-picture-973460_1280.png'),
-(44, 1, 'Pulpen Hitech Pilot', 'pcs', '11892', '12487', 134, 0, 'blank-profile-picture-973460_1280.png'),
-(45, 1, 'Bigbabol Crm Strw Stck 20', 'pak', '46959', '49307', 155, 0, 'blank-profile-picture-973460_1280.png'),
-(46, 1, 'Rinso Molto 250g', 'gram', '36913', '38759', 128, 0, 'blank-profile-picture-973460_1280.png'),
-(47, 1, 'Real Good F.Blackrn 60ml', 'ml', '22653', '23786', 93, 0, 'blank-profile-picture-973460_1280.png'),
-(48, 1, 'So Nice Sosis Sapi 1 \'S', 'pak', '34407', '36127', 185, 0, 'blank-profile-picture-973460_1280.png'),
-(49, 1, 'Frestea Markisa 350', 'pcs', '39115', '41071', 173, 0, 'blank-profile-picture-973460_1280.png'),
-(50, 1, 'Susan C.Bud Spd 620', 'pcs', '11005', '11555', 120, 0, 'blank-profile-picture-973460_1280.png'),
-(51, 1, 'Cb Powder Mld&Gntl 50g', 'gram', '22679', '23813', 114, 0, 'blank-profile-picture-973460_1280.png'),
-(52, 1, 'Biore Bf Chocobery 250rf', 'pcs', '48924', '51370', 123, 0, 'blank-profile-picture-973460_1280.png'),
-(53, 1, 'Pagoda Pstls Mint 10g', 'gram', '30981', '32530', 129, 0, 'blank-profile-picture-973460_1280.png'),
-(54, 1, 'Gery Chocolatos Kj 33g Fam', 'pcs', '36719', '38555', 184, 0, 'blank-profile-picture-973460_1280.png'),
-(55, 1, 'Richoco Roll Ckl 8g/Box', 'pak', '15807', '16597', 192, 0, 'blank-profile-picture-973460_1280.png'),
-(56, 1, 'Tali Masker', 'pcs', '36475', '38299', 151, 0, 'blank-profile-picture-973460_1280.png'),
-(57, 1, 'Daster Bcl', 'pcs', '12691', '13326', 164, 0, 'blank-profile-picture-973460_1280.png'),
-(58, 1, 'Hit Mat Green Tea 18+6', 'pak', '40616', '42647', 92, 0, 'blank-profile-picture-973460_1280.png'),
-(59, 1, 'Viva F.Tonic Lemon 100ml', 'ml', '15605', '16385', 80, 0, 'blank-profile-picture-973460_1280.png'),
-(60, 1, 'Sunlight Lime Rf 220ml', 'ml', '13702', '14387', 127, 0, 'blank-profile-picture-973460_1280.png'),
-(61, 1, 'Sasa 250gr', 'gram', '38385', '40304', 157, 0, 'blank-profile-picture-973460_1280.png'),
-(62, 1, 'Kispray Violet 8ml*6\'s', 'ml', '25556', '26834', 116, 0, 'blank-profile-picture-973460_1280.png'),
-(63, 1, 'Lord Blue Plus Ii', 'pcs', '27896', '29291', 178, 0, 'blank-profile-picture-973460_1280.png'),
-(64, 1, 'Bendera Cair Swis C 180ml', 'ml', '36741', '38578', 167, 0, 'blank-profile-picture-973460_1280.png'),
-(65, 1, 'Ades Botol 1.5ml', 'ml', '14859', '15602', 118, 0, 'blank-profile-picture-973460_1280.png'),
-(66, 1, 'Beng-Beng Kelapa 24g', 'gram', '31758', '33346', 100, 0, 'blank-profile-picture-973460_1280.png'),
-(67, 1, 'Pop Ice Avocado 25g*5\'s', 'gram', '10635', '11167', 132, 0, 'blank-profile-picture-973460_1280.png'),
-(68, 1, 'Molto All In1 Blue 800ml', 'ml', '35085', '36839', 23, 0, 'blank-profile-picture-973460_1280.png'),
-(69, 1, 'Soffell Apel 6g*6', 'gram', '30174', '31683', 126, 0, 'blank-profile-picture-973460_1280.png'),
-(70, 1, 'Downy Daring 20ml*6', 'ml', '48445', '50867', 150, 0, 'blank-profile-picture-973460_1280.png'),
-(71, 1, 'Zinc Shp Cln&Act 70ml', 'ml', '23348', '24515', 175, 0, 'blank-profile-picture-973460_1280.png'),
-(72, 1, 'Citra Hbl Night Wht 230ml', 'ml', '30520', '32046', 70, 0, 'blank-profile-picture-973460_1280.png'),
-(73, 1, 'Richoco Roll Cklt 43g', 'gram', '25870', '27164', 86, 0, 'blank-profile-picture-973460_1280.png'),
-(74, 1, 'Mitu Milk Bath Btl 200ml', 'ml', '37727', '39613', 101, 0, 'blank-profile-picture-973460_1280.png'),
-(75, 1, 'Mi-Won 100gr', 'gram', '46158', '48466', 194, 0, 'blank-profile-picture-973460_1280.png'),
-(76, 1, 'Sg Formula Protec Soft', 'pcs', '18652', '19585', 143, 0, 'blank-profile-picture-973460_1280.png'),
-(77, 1, 'Pop Ice Mocacino 25g*5\'s', 'gram', '24436', '25658', 158, 0, 'blank-profile-picture-973460_1280.png'),
-(78, 1, 'Kertas Kado Kiki Batik', 'pcs', '42127', '44233', 109, 0, 'blank-profile-picture-973460_1280.png'),
-(79, 1, 'Papan Ujian 2 Dimensi', 'pcs', '25579', '26858', 50, 0, 'blank-profile-picture-973460_1280.png'),
-(80, 1, 'Drs Kuyirva 56289', 'pcs', '22504', '23629', 132, 0, 'blank-profile-picture-973460_1280.png'),
-(81, 1, 'Mama Lime Charcl 400 Bt', 'pcs', '15641', '16423', 120, 0, 'blank-profile-picture-973460_1280.png'),
-(82, 1, 'Shinzui Soap Kensho 90gr', 'gram', '27353', '28721', 135, 0, 'blank-profile-picture-973460_1280.png'),
-(83, 1, 'Nextar Nastar 42gr', 'gram', '13188', '13847', 188, 0, 'blank-profile-picture-973460_1280.png'),
-(84, 1, 'Vaneli Bdt 10\'s', 'pcs', '13228', '13889', 162, 0, 'blank-profile-picture-973460_1280.png'),
-(85, 1, 'Hot In Cream Strong 60ml', 'ml', '48505', '50930', 157, 0, 'blank-profile-picture-973460_1280.png'),
-(86, 1, 'Soklin Liq Red 24ml*6', 'ml', '38699', '40634', 32, 0, 'blank-profile-picture-973460_1280.png'),
-(87, 1, 'Mie Sedap Korea Spicy', 'pcs', '18325', '19241', 96, 0, 'blank-profile-picture-973460_1280.png'),
-(88, 1, 'Jam Tangan 42500', 'pcs', '37797', '39687', 26, 0, 'blank-profile-picture-973460_1280.png'),
-(89, 1, 'Cho Cho Wf Snack Crsp 33g', 'gram', '32484', '34108', 89, 0, 'blank-profile-picture-973460_1280.png'),
-(90, 1, 'Downy Swethrt 20ml*6', 'ml', '14341', '15058', 136, 0, 'blank-profile-picture-973460_1280.png'),
-(91, 1, 'Sabut Stainles 40 Hkf', 'pcs', '46078', '48382', 162, 0, 'blank-profile-picture-973460_1280.png'),
-(92, 1, 'Zw Soap Milk&Hny 80g', 'gram', '45752', '48040', 60, 0, 'blank-profile-picture-973460_1280.png'),
-(93, 1, 'Alkaline Aa Lr-06 2\'s', 'pcs', '22746', '23883', 153, 0, 'blank-profile-picture-973460_1280.png'),
-(94, 1, 'Saori S.Teriyaki 30gr', 'gram', '33929', '35625', 138, 0, 'blank-profile-picture-973460_1280.png'),
-(95, 1, 'Proclin P.Noda 6*25ml', 'ml', '17137', '17994', 24, 0, 'blank-profile-picture-973460_1280.png'),
-(96, 1, 'Aqua Galon Isi Ulang', 'pcs', '43671', '45855', 200, 0, 'blank-profile-picture-973460_1280.png'),
-(97, 1, 'Sendok Bebek 24\'s', 'pcs', '47806', '50196', 194, 0, 'blank-profile-picture-973460_1280.png'),
-(98, 1, 'Roma Sand Pnt 216g', 'gram', '19252', '20215', 39, 0, 'blank-profile-picture-973460_1280.png'),
-(99, 1, 'Sg Formula Trendy S', 'pak', '31815', '33406', 109, 0, 'blank-profile-picture-973460_1280.png'),
-(100, 1, 'Promina Tm Ay&Tmtwtl 100', 'pcs', '20304', '21319', 163, 0, 'blank-profile-picture-973460_1280.png'),
-(101, 1, 'Gulaku Kng 500gr', 'gram', '26213', '27524', 122, 0, 'blank-profile-picture-973460_1280.png'),
-(102, 1, 'Aci Spm 1kg', 'kg', '18700', '19635', 24, 0, 'blank-profile-picture-973460_1280.png'),
-(103, 1, 'Yupi Exotic Mango 10g', 'gram', '34735', '36472', 155, 0, 'blank-profile-picture-973460_1280.png'),
-(104, 1, 'Laurier Spr Maxi 10\'pds', 'pcs', '26179', '27488', 126, 0, 'blank-profile-picture-973460_1280.png'),
-(105, 1, 'Bendera 3+ Madu 360g', 'gram', '18842', '19784', 89, 0, 'blank-profile-picture-973460_1280.png'),
-(106, 1, 'Esse Berry Pop', 'pcs', '41281', '43345', 116, 0, 'blank-profile-picture-973460_1280.png'),
-(107, 1, 'Teh Pucuk Jasmin 250ml', 'ml', '33381', '35050', 112, 0, 'blank-profile-picture-973460_1280.png'),
-(108, 1, 'Hula Cup Durian 80ml', 'ml', '37018', '38869', 53, 0, 'blank-profile-picture-973460_1280.png'),
-(109, 1, 'Gil Goal Klik Hc', 'pcs', '30399', '31919', 57, 0, 'blank-profile-picture-973460_1280.png'),
-(110, 1, 'Mens Biore Fw Energy 40g', 'gram', '27164', '28522', 182, 0, 'blank-profile-picture-973460_1280.png'),
-(111, 1, 'Soklin Liq Wht&Brt 24ml*6', 'ml', '36541', '38368', 31, 0, 'blank-profile-picture-973460_1280.png'),
-(112, 1, 'Nestle Kokokrnch Cmbo 32g', 'gram', '37284', '39148', 59, 0, 'blank-profile-picture-973460_1280.png'),
-(113, 1, 'Tim Tam Bisc Choco 16g', 'gram', '13658', '14341', 85, 0, 'blank-profile-picture-973460_1280.png'),
-(114, 1, 'Roma Slai O\'lai Blb 24g', 'gram', '28786', '30225', 53, 0, 'blank-profile-picture-973460_1280.png'),
-(115, 1, 'Fullo Blasto Cklt 16g', 'gram', '31058', '32611', 63, 0, 'blank-profile-picture-973460_1280.png'),
-(116, 1, 'Zee Rtd Cklt 200ml', 'ml', '11441', '12013', 182, 0, 'blank-profile-picture-973460_1280.png'),
-(117, 1, 'Milna Puff Keju 15g', 'gram', '23249', '24411', 24, 0, 'blank-profile-picture-973460_1280.png'),
-(118, 1, 'Abc Smbl Terasi 23g', 'gram', '26426', '27747', 166, 0, 'blank-profile-picture-973460_1280.png'),
-(119, 1, 'Sg Dr White Clean', 'pcs', '24126', '25332', 71, 0, 'blank-profile-picture-973460_1280.png'),
-(120, 1, 'Lux Ts Pink S.Rose 85g', 'gram', '44168', '46376', 106, 0, 'blank-profile-picture-973460_1280.png'),
-(121, 1, 'Rinso Molto Prfm Essen 770g', 'gram', '46165', '48473', 79, 0, 'blank-profile-picture-973460_1280.png'),
-(122, 1, 'Mie Sedap Cup Korea Spc', 'pcs', '46829', '49170', 158, 0, 'blank-profile-picture-973460_1280.png'),
-(123, 1, 'Bihun Jg Padamu Kng 200g', 'gram', '28110', '29516', 47, 0, 'blank-profile-picture-973460_1280.png'),
-(124, 1, 'Harmony Green Apple 70g', 'gram', '49640', '52122', 140, 0, 'blank-profile-picture-973460_1280.png'),
-(125, 1, 'Sweety Fit Pants M18', 'pcs', '33595', '35275', 177, 0, 'blank-profile-picture-973460_1280.png'),
-(126, 1, 'Isi Etona No.10', 'pcs', '37624', '39505', 151, 0, 'blank-profile-picture-973460_1280.png'),
-(127, 1, 'Marina Hbl Nou&Healt 100m', 'ml', '43121', '45277', 68, 0, 'blank-profile-picture-973460_1280.png'),
-(128, 1, 'Komix Jahe 7m', 'pcs', '24821', '26062', 200, 0, 'blank-profile-picture-973460_1280.png'),
-(129, 1, 'Patrick Stik 65ml', 'ml', '32132', '33739', 86, 0, 'blank-profile-picture-973460_1280.png'),
-(130, 1, 'Merris Pants S11', 'pcs', '28460', '29883', 137, 0, 'blank-profile-picture-973460_1280.png'),
-(131, 1, 'Taro Net Potato 9g', 'pcs', '17147', '18004', 177, 0, 'blank-profile-picture-973460_1280.png'),
-(132, 1, 'Kutex Nail Polish', 'pcs', '36270', '38084', 80, 0, 'blank-profile-picture-973460_1280.png'),
-(133, 1, 'Charm Bf Sc Ngt Wg 29-10p', 'pcs', '16380', '17199', 187, 0, 'blank-profile-picture-973460_1280.png'),
-(134, 1, 'Tea Jus Lemon 8g*10\'s', 'pcs', '20368', '21386', 20, 0, 'blank-profile-picture-973460_1280.png'),
-(135, 1, 'Mamypoko Pants Stand S1', 'pcs', '49339', '51806', 118, 0, 'blank-profile-picture-973460_1280.png'),
-(136, 1, 'Sg Formula Jun Walrus', 'pcs', '13267', '13930', 130, 0, 'blank-profile-picture-973460_1280.png'),
-(137, 1, 'Pepsodent Tb D.C Cln Mp2', 'pcs', '23830', '25022', 69, 0, 'blank-profile-picture-973460_1280.png'),
-(138, 1, 'Vaselin Hbl Hw Ins Fair95', 'pcs', '44080', '46284', 196, 0, 'blank-profile-picture-973460_1280.png'),
-(139, 1, 'Sdl Spon Wakat', 'pcs', '11635', '12217', 46, 0, 'blank-profile-picture-973460_1280.png'),
-(140, 1, 'Madu Tj Jrk 20gr', 'pcs', '13196', '13856', 122, 0, 'blank-profile-picture-973460_1280.png'),
-(141, 1, 'Cb Gift Box B', 'pcs', '24433', '25655', 80, 0, 'blank-profile-picture-973460_1280.png'),
-(142, 1, 'Dancow 1+Pbio1 Madu 400g', 'pcs', '41962', '44060', 136, 0, 'blank-profile-picture-973460_1280.png'),
-(143, 1, 'Vaneli Spr Kupu', 'pcs', '44930', '47177', 105, 0, 'blank-profile-picture-973460_1280.png'),
-(144, 1, 'Fullo Blasto Cklt 16g/ Box', 'pcs', '13375', '14044', 101, 0, 'blank-profile-picture-973460_1280.png'),
-(145, 1, 'Lactogen 2 Gold 350g', 'pcs', '27333', '28700', 146, 0, 'blank-profile-picture-973460_1280.png'),
-(146, 1, 'Mesis Kupu Warna', 'pcs', '25276', '26540', 161, 0, 'blank-profile-picture-973460_1280.png'),
-(147, 1, 'Giv Soap Tin&Zaitun', 'pcs', '48841', '51283', 56, 0, 'blank-profile-picture-973460_1280.png'),
-(148, 1, 'Teh Tong Tji J.Tea 5\'s', 'pcs', '47420', '49791', 64, 0, 'blank-profile-picture-973460_1280.png'),
-(149, 1, 'Stmj Cklt 30g', 'pcs', '13863', '14556', 118, 0, 'blank-profile-picture-973460_1280.png'),
-(150, 1, 'Gembok 40 Pj', 'pcs', '20290', '21305', 105, 0, 'blank-profile-picture-973460_1280.png');
+INSERT INTO `produk` (`id_produk`, `id_user`, `nama_produk`, `keterangan`, `harga`, `harga_supplier`, `stat_produk`, `gambar`) VALUES
+(1, 1, 'Gula Psr Lokal I/2kg', 'kg', '35816', '37607', 0, 'blank-profile-picture-973460_1280.png'),
+(2, 1, 'Mb.Minyak Telon Pls 85', 'liter', '12592', '13222', 0, 'blank-profile-picture-973460_1280.png'),
+(3, 1, 'Indomilk Kids Ckl 115m', 'ml', '10602', '11132', 1, 'blank-profile-picture-973460_1280.png'),
+(4, 1, 'Indomie Aym Bwg 69g', 'gram', '12578', '13207', 0, 'blank-profile-picture-973460_1280.png'),
+(5, 1, 'Masker S Polos', 'pcs', '29871', '31365', 0, 'blank-profile-picture-973460_1280.png'),
+(6, 1, 'Real Good S.Choco 60ml', 'ml', '32270', '33884', 0, 'blank-profile-picture-973460_1280.png'),
+(7, 1, 'Fresco Kopi Cream 10\'s', 'pcs', '11626', '12207', 0, 'blank-profile-picture-973460_1280.png'),
+(8, 1, 'Paramex 4\'s', 'pcs', '44671', '46905', 0, 'blank-profile-picture-973460_1280.png'),
+(9, 1, 'Garuda Rosta Rs Bwng 25g', 'gram', '30123', '31629', 0, 'blank-profile-picture-973460_1280.png'),
+(10, 1, 'Eskulin Shp Donald 45ml', 'ml', '49669', '52152', 0, 'blank-profile-picture-973460_1280.png'),
+(11, 1, 'Dancow 3+Pbio3 Madu 200g', 'gram', '28044', '29446', 0, 'blank-profile-picture-973460_1280.png'),
+(12, 1, 'Oishi Panchos Jg Pds 160', 'pcs', '39264', '41227', 0, 'blank-profile-picture-973460_1280.png'),
+(13, 1, 'Lifebuoy Bw Cool 450ml Rf', 'ml', '25570', '26849', 0, 'blank-profile-picture-973460_1280.png'),
+(14, 1, 'Kuas Pagoda 7.8', 'pcs', '25711', '26997', 0, 'blank-profile-picture-973460_1280.png'),
+(15, 1, 'Popok Alan B Era', 'pcs', '26944', '28291', 0, 'blank-profile-picture-973460_1280.png'),
+(16, 1, 'Walls Populer Cho Van', 'pcs', '15566', '16344', 0, 'blank-profile-picture-973460_1280.png'),
+(17, 1, 'Moko Moko M19', 'pcs', '17713', '18599', 0, 'blank-profile-picture-973460_1280.png'),
+(18, 1, 'Oskadon Sp/4 Tab', 'pcs', '38257', '40170', 0, 'blank-profile-picture-973460_1280.png'),
+(19, 1, 'Sabun L.Buaya 900p', 'pcs', '21065', '22118', 0, 'blank-profile-picture-973460_1280.png'),
+(20, 1, 'Kopi K.Api Spc Mix25g*10\'s', 'pcs', '20390', '21410', 0, 'blank-profile-picture-973460_1280.png'),
+(21, 1, 'Pudding Susu Strw 145g', 'gram', '27613', '28994', 0, 'blank-profile-picture-973460_1280.png'),
+(22, 1, 'Okky J.Drink Bblgum', 'pcs', '35040', '36792', 0, 'blank-profile-picture-973460_1280.png'),
+(23, 1, 'Teh Rio Gula Bt 200m', 'ml', '36658', '38491', 0, 'blank-profile-picture-973460_1280.png'),
+(24, 1, 'Cutter Jk A 300a', 'pcs', '31967', '33565', 0, 'blank-profile-picture-973460_1280.png'),
+(25, 1, 'Ekonomi E2k Kantong', 'pcs', '20661', '21694', 0, 'blank-profile-picture-973460_1280.png'),
+(26, 1, 'Kertas Kado Kiki Kcl', 'pcs', '22728', '23864', 0, 'blank-profile-picture-973460_1280.png'),
+(27, 1, 'Torabika Creamy Latte', 'pcs', '22319', '23435', 0, 'blank-profile-picture-973460_1280.png'),
+(28, 1, 'Promina Puff Str+Apl 15', 'pcs', '41751', '43839', 0, 'blank-profile-picture-973460_1280.png'),
+(29, 1, 'Wcc Pudding Guava 120gr', 'gram', '14036', '14738', 0, 'blank-profile-picture-973460_1280.png'),
+(30, 1, 'Oreo Coklat 38g', 'gram', '25646', '26928', 0, 'blank-profile-picture-973460_1280.png'),
+(31, 1, 'Djarum Coklat 12', 'pcs', '43362', '45530', 0, 'blank-profile-picture-973460_1280.png'),
+(32, 1, 'Richees Rol Kj 43gr', 'gram', '17420', '18291', 0, 'blank-profile-picture-973460_1280.png'),
+(33, 1, 'Kecap Abc Mns 275m', 'ml', '21842', '22934', 0, 'blank-profile-picture-973460_1280.png'),
+(34, 1, 'Madu Tj Super 250g', 'gram', '35938', '37735', 0, 'blank-profile-picture-973460_1280.png'),
+(35, 1, 'Sania Mg 2lt Pch', 'liter', '24564', '25792', 0, 'blank-profile-picture-973460_1280.png'),
+(36, 1, 'Filma Mgrn Salt 200g', 'gram', '35965', '37763', 0, 'blank-profile-picture-973460_1280.png'),
+(37, 1, 'Uleg Sbl Rawit 20g/Pak', 'pak', '38663', '40596', 0, 'blank-profile-picture-973460_1280.png'),
+(38, 1, 'Indomie Grg Rendang', 'pcs', '35662', '37445', 0, 'blank-profile-picture-973460_1280.png'),
+(39, 1, 'Indomie Grg Iga Penyet', 'pcs', '16663', '17496', 0, 'blank-profile-picture-973460_1280.png'),
+(40, 1, 'Shinzui Soap Myori 90gr', 'gram', '35104', '36859', 0, 'blank-profile-picture-973460_1280.png'),
+(41, 1, 'Hufagripp Tmp 60ml', 'ml', '31079', '32633', 0, 'blank-profile-picture-973460_1280.png'),
+(42, 1, 'Frestea Jasmine Cup 300ml', 'ml', '33152', '34810', 0, 'blank-profile-picture-973460_1280.png'),
+(43, 1, 'Aircup Btl 600ml', 'ml', '32657', '34290', 0, 'blank-profile-picture-973460_1280.png'),
+(44, 1, 'Pulpen Hitech Pilot', 'pcs', '11892', '12487', 0, 'blank-profile-picture-973460_1280.png'),
+(45, 1, 'Bigbabol Crm Strw Stck 20', 'pak', '46959', '49307', 0, 'blank-profile-picture-973460_1280.png'),
+(46, 1, 'Rinso Molto 250g', 'gram', '36913', '38759', 0, 'blank-profile-picture-973460_1280.png'),
+(47, 1, 'Real Good F.Blackrn 60ml', 'ml', '22653', '23786', 0, 'blank-profile-picture-973460_1280.png'),
+(48, 1, 'So Nice Sosis Sapi 1 \'S', 'pak', '34407', '36127', 0, 'blank-profile-picture-973460_1280.png'),
+(49, 1, 'Frestea Markisa 350', 'pcs', '39115', '41071', 0, 'blank-profile-picture-973460_1280.png'),
+(50, 1, 'Susan C.Bud Spd 620', 'pcs', '11005', '11555', 0, 'blank-profile-picture-973460_1280.png'),
+(51, 1, 'Cb Powder Mld&Gntl 50g', 'gram', '22679', '23813', 0, 'blank-profile-picture-973460_1280.png'),
+(52, 1, 'Biore Bf Chocobery 250rf', 'pcs', '48924', '51370', 0, 'blank-profile-picture-973460_1280.png'),
+(53, 1, 'Pagoda Pstls Mint 10g', 'gram', '30981', '32530', 0, 'blank-profile-picture-973460_1280.png'),
+(54, 1, 'Gery Chocolatos Kj 33g Fam', 'pcs', '36719', '38555', 0, 'blank-profile-picture-973460_1280.png'),
+(55, 1, 'Richoco Roll Ckl 8g/Box', 'pak', '15807', '16597', 0, 'blank-profile-picture-973460_1280.png'),
+(56, 1, 'Tali Masker', 'pcs', '36475', '38299', 0, 'blank-profile-picture-973460_1280.png'),
+(57, 1, 'Daster Bcl', 'pcs', '12691', '13326', 0, 'blank-profile-picture-973460_1280.png'),
+(58, 1, 'Hit Mat Green Tea 18+6', 'pak', '40616', '42647', 0, 'blank-profile-picture-973460_1280.png'),
+(59, 1, 'Viva F.Tonic Lemon 100ml', 'ml', '15605', '16385', 0, 'blank-profile-picture-973460_1280.png'),
+(60, 1, 'Sunlight Lime Rf 220ml', 'ml', '13702', '14387', 0, 'blank-profile-picture-973460_1280.png'),
+(61, 1, 'Sasa 250gr', 'gram', '38385', '40304', 0, 'blank-profile-picture-973460_1280.png'),
+(62, 1, 'Kispray Violet 8ml*6\'s', 'ml', '25556', '26834', 0, 'blank-profile-picture-973460_1280.png'),
+(63, 1, 'Lord Blue Plus Ii', 'pcs', '27896', '29291', 0, 'blank-profile-picture-973460_1280.png'),
+(64, 1, 'Bendera Cair Swis C 180ml', 'ml', '36741', '38578', 0, 'blank-profile-picture-973460_1280.png'),
+(65, 1, 'Ades Botol 1.5ml', 'ml', '14859', '15602', 0, 'blank-profile-picture-973460_1280.png'),
+(66, 1, 'Beng-Beng Kelapa 24g', 'gram', '31758', '33346', 0, 'blank-profile-picture-973460_1280.png'),
+(67, 1, 'Pop Ice Avocado 25g*5\'s', 'gram', '10635', '11167', 0, 'blank-profile-picture-973460_1280.png'),
+(68, 1, 'Molto All In1 Blue 800ml', 'ml', '35085', '36839', 0, 'blank-profile-picture-973460_1280.png'),
+(69, 1, 'Soffell Apel 6g*6', 'gram', '30174', '31683', 0, 'blank-profile-picture-973460_1280.png'),
+(70, 1, 'Downy Daring 20ml*6', 'ml', '48445', '50867', 0, 'blank-profile-picture-973460_1280.png'),
+(71, 1, 'Zinc Shp Cln&Act 70ml', 'ml', '23348', '24515', 0, 'blank-profile-picture-973460_1280.png'),
+(72, 1, 'Citra Hbl Night Wht 230ml', 'ml', '30520', '32046', 0, 'blank-profile-picture-973460_1280.png'),
+(73, 1, 'Richoco Roll Cklt 43g', 'gram', '25870', '27164', 0, 'blank-profile-picture-973460_1280.png'),
+(74, 1, 'Mitu Milk Bath Btl 200ml', 'ml', '37727', '39613', 0, 'blank-profile-picture-973460_1280.png'),
+(75, 1, 'Mi-Won 100gr', 'gram', '46158', '48466', 0, 'blank-profile-picture-973460_1280.png'),
+(76, 1, 'Sg Formula Protec Soft', 'pcs', '18652', '19585', 0, 'blank-profile-picture-973460_1280.png'),
+(77, 1, 'Pop Ice Mocacino 25g*5\'s', 'gram', '24436', '25658', 0, 'blank-profile-picture-973460_1280.png'),
+(78, 1, 'Kertas Kado Kiki Batik', 'pcs', '42127', '44233', 0, 'blank-profile-picture-973460_1280.png'),
+(79, 1, 'Papan Ujian 2 Dimensi', 'pcs', '25579', '26858', 0, 'blank-profile-picture-973460_1280.png'),
+(80, 1, 'Drs Kuyirva 56289', 'pcs', '22504', '23629', 0, 'blank-profile-picture-973460_1280.png'),
+(81, 1, 'Mama Lime Charcl 400 Bt', 'pcs', '15641', '16423', 0, 'blank-profile-picture-973460_1280.png'),
+(82, 1, 'Shinzui Soap Kensho 90gr', 'gram', '27353', '28721', 0, 'blank-profile-picture-973460_1280.png'),
+(83, 1, 'Nextar Nastar 42gr', 'gram', '13188', '13847', 0, 'blank-profile-picture-973460_1280.png'),
+(84, 1, 'Vaneli Bdt 10\'s', 'pcs', '13228', '13889', 0, 'blank-profile-picture-973460_1280.png'),
+(85, 1, 'Hot In Cream Strong 60ml', 'ml', '48505', '50930', 0, 'blank-profile-picture-973460_1280.png'),
+(86, 1, 'Soklin Liq Red 24ml*6', 'ml', '38699', '40634', 0, 'blank-profile-picture-973460_1280.png'),
+(87, 1, 'Mie Sedap Korea Spicy', 'pcs', '18325', '19241', 0, 'blank-profile-picture-973460_1280.png'),
+(88, 1, 'Jam Tangan 42500', 'pcs', '37797', '39687', 0, 'blank-profile-picture-973460_1280.png'),
+(89, 1, 'Cho Cho Wf Snack Crsp 33g', 'gram', '32484', '34108', 0, 'blank-profile-picture-973460_1280.png'),
+(90, 1, 'Downy Swethrt 20ml*6', 'ml', '14341', '15058', 0, 'blank-profile-picture-973460_1280.png'),
+(91, 1, 'Sabut Stainles 40 Hkf', 'pcs', '46078', '48382', 0, 'blank-profile-picture-973460_1280.png'),
+(92, 1, 'Zw Soap Milk&Hny 80g', 'gram', '45752', '48040', 0, 'blank-profile-picture-973460_1280.png'),
+(93, 1, 'Alkaline Aa Lr-06 2\'s', 'pcs', '22746', '23883', 0, 'blank-profile-picture-973460_1280.png'),
+(94, 1, 'Saori S.Teriyaki 30gr', 'gram', '33929', '35625', 0, 'blank-profile-picture-973460_1280.png'),
+(95, 1, 'Proclin P.Noda 6*25ml', 'ml', '17137', '17994', 0, 'blank-profile-picture-973460_1280.png'),
+(96, 1, 'Aqua Galon Isi Ulang', 'pcs', '43671', '45855', 0, 'blank-profile-picture-973460_1280.png'),
+(97, 1, 'Sendok Bebek 24\'s', 'pcs', '47806', '50196', 0, 'blank-profile-picture-973460_1280.png'),
+(98, 1, 'Roma Sand Pnt 216g', 'gram', '19252', '20215', 0, 'blank-profile-picture-973460_1280.png'),
+(99, 1, 'Sg Formula Trendy S', 'pak', '31815', '33406', 0, 'blank-profile-picture-973460_1280.png'),
+(100, 1, 'Promina Tm Ay&Tmtwtl 100', 'pcs', '20304', '21319', 0, 'blank-profile-picture-973460_1280.png'),
+(101, 1, 'Gulaku Kng 500gr', 'gram', '26213', '27524', 0, 'blank-profile-picture-973460_1280.png'),
+(102, 1, 'Aci Spm 1kg', 'kg', '18700', '19635', 0, 'blank-profile-picture-973460_1280.png'),
+(103, 1, 'Yupi Exotic Mango 10g', 'gram', '34735', '36472', 0, 'blank-profile-picture-973460_1280.png'),
+(104, 1, 'Laurier Spr Maxi 10\'pds', 'pcs', '26179', '27488', 0, 'blank-profile-picture-973460_1280.png'),
+(105, 1, 'Bendera 3+ Madu 360g', 'gram', '18842', '19784', 0, 'blank-profile-picture-973460_1280.png'),
+(106, 1, 'Esse Berry Pop', 'pcs', '41281', '43345', 0, 'blank-profile-picture-973460_1280.png'),
+(107, 1, 'Teh Pucuk Jasmin 250ml', 'ml', '33381', '35050', 0, 'blank-profile-picture-973460_1280.png'),
+(108, 1, 'Hula Cup Durian 80ml', 'ml', '37018', '38869', 0, 'blank-profile-picture-973460_1280.png'),
+(109, 1, 'Gil Goal Klik Hc', 'pcs', '30399', '31919', 0, 'blank-profile-picture-973460_1280.png'),
+(110, 1, 'Mens Biore Fw Energy 40g', 'gram', '27164', '28522', 0, 'blank-profile-picture-973460_1280.png'),
+(111, 1, 'Soklin Liq Wht&Brt 24ml*6', 'ml', '36541', '38368', 0, 'blank-profile-picture-973460_1280.png'),
+(112, 1, 'Nestle Kokokrnch Cmbo 32g', 'gram', '37284', '39148', 0, 'blank-profile-picture-973460_1280.png'),
+(113, 1, 'Tim Tam Bisc Choco 16g', 'gram', '13658', '14341', 0, 'blank-profile-picture-973460_1280.png'),
+(114, 1, 'Roma Slai O\'lai Blb 24g', 'gram', '28786', '30225', 0, 'blank-profile-picture-973460_1280.png'),
+(115, 1, 'Fullo Blasto Cklt 16g', 'gram', '31058', '32611', 0, 'blank-profile-picture-973460_1280.png'),
+(116, 1, 'Zee Rtd Cklt 200ml', 'ml', '11441', '12013', 0, 'blank-profile-picture-973460_1280.png'),
+(117, 1, 'Milna Puff Keju 15g', 'gram', '23249', '24411', 0, 'blank-profile-picture-973460_1280.png'),
+(118, 1, 'Abc Smbl Terasi 23g', 'gram', '26426', '27747', 0, 'blank-profile-picture-973460_1280.png'),
+(119, 1, 'Sg Dr White Clean', 'pcs', '24126', '25332', 0, 'blank-profile-picture-973460_1280.png'),
+(120, 1, 'Lux Ts Pink S.Rose 85g', 'gram', '44168', '46376', 0, 'blank-profile-picture-973460_1280.png'),
+(121, 1, 'Rinso Molto Prfm Essen 770g', 'gram', '46165', '48473', 0, 'blank-profile-picture-973460_1280.png'),
+(122, 1, 'Mie Sedap Cup Korea Spc', 'pcs', '46829', '49170', 0, 'blank-profile-picture-973460_1280.png'),
+(123, 1, 'Bihun Jg Padamu Kng 200g', 'gram', '28110', '29516', 0, 'blank-profile-picture-973460_1280.png'),
+(124, 1, 'Harmony Green Apple 70g', 'gram', '49640', '52122', 0, 'blank-profile-picture-973460_1280.png'),
+(125, 1, 'Sweety Fit Pants M18', 'pcs', '33595', '35275', 0, 'blank-profile-picture-973460_1280.png'),
+(126, 1, 'Isi Etona No.10', 'pcs', '37624', '39505', 0, 'blank-profile-picture-973460_1280.png'),
+(127, 1, 'Marina Hbl Nou&Healt 100m', 'ml', '43121', '45277', 0, 'blank-profile-picture-973460_1280.png'),
+(128, 1, 'Komix Jahe 7m', 'pcs', '24821', '26062', 0, 'blank-profile-picture-973460_1280.png'),
+(129, 1, 'Patrick Stik 65ml', 'ml', '32132', '33739', 0, 'blank-profile-picture-973460_1280.png'),
+(130, 1, 'Merris Pants S11', 'pcs', '28460', '29883', 0, 'blank-profile-picture-973460_1280.png'),
+(131, 1, 'Taro Net Potato 9g', 'pcs', '17147', '18004', 0, 'blank-profile-picture-973460_1280.png'),
+(132, 1, 'Kutex Nail Polish', 'pcs', '36270', '38084', 0, 'blank-profile-picture-973460_1280.png'),
+(133, 1, 'Charm Bf Sc Ngt Wg 29-10p', 'pcs', '16380', '17199', 0, 'blank-profile-picture-973460_1280.png'),
+(134, 1, 'Tea Jus Lemon 8g*10\'s', 'pcs', '20368', '21386', 0, 'blank-profile-picture-973460_1280.png'),
+(135, 1, 'Mamypoko Pants Stand S1', 'pcs', '49339', '51806', 0, 'blank-profile-picture-973460_1280.png'),
+(136, 1, 'Sg Formula Jun Walrus', 'pcs', '13267', '13930', 0, 'blank-profile-picture-973460_1280.png'),
+(137, 1, 'Pepsodent Tb D.C Cln Mp2', 'pcs', '23830', '25022', 0, 'blank-profile-picture-973460_1280.png'),
+(138, 1, 'Vaselin Hbl Hw Ins Fair95', 'pcs', '44080', '46284', 0, 'blank-profile-picture-973460_1280.png'),
+(139, 1, 'Sdl Spon Wakat', 'pcs', '11635', '12217', 0, 'blank-profile-picture-973460_1280.png'),
+(140, 1, 'Madu Tj Jrk 20gr', 'pcs', '13196', '13856', 0, 'blank-profile-picture-973460_1280.png'),
+(141, 1, 'Cb Gift Box B', 'pcs', '24433', '25655', 0, 'blank-profile-picture-973460_1280.png'),
+(142, 1, 'Dancow 1+Pbio1 Madu 400g', 'pcs', '41962', '44060', 0, 'blank-profile-picture-973460_1280.png'),
+(143, 1, 'Vaneli Spr Kupu', 'pcs', '44930', '47177', 0, 'blank-profile-picture-973460_1280.png'),
+(144, 1, 'Fullo Blasto Cklt 16g/ Box', 'pcs', '13375', '14044', 0, 'blank-profile-picture-973460_1280.png'),
+(145, 1, 'Lactogen 2 Gold 350g', 'pcs', '27333', '28700', 0, 'blank-profile-picture-973460_1280.png'),
+(146, 1, 'Mesis Kupu Warna', 'pcs', '25276', '26540', 0, 'blank-profile-picture-973460_1280.png'),
+(147, 1, 'Giv Soap Tin&Zaitun', 'pcs', '48841', '51283', 0, 'blank-profile-picture-973460_1280.png'),
+(148, 1, 'Teh Tong Tji J.Tea 5\'s', 'pcs', '47420', '49791', 0, 'blank-profile-picture-973460_1280.png'),
+(149, 1, 'Stmj Cklt 30g', 'pcs', '13863', '14556', 0, 'blank-profile-picture-973460_1280.png'),
+(150, 1, 'Gembok 40 Pj', 'pcs', '20290', '21305', 0, 'blank-profile-picture-973460_1280.png');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `transaksi`
+-- Struktur dari tabel `transaksi`
 --
 
 CREATE TABLE `transaksi` (
@@ -771,7 +770,7 @@ CREATE TABLE `transaksi` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `transaksi`
+-- Dumping data untuk tabel `transaksi`
 --
 
 INSERT INTO `transaksi` (`id_transaksi`, `id_pelanggan`, `id_ongkir`, `tgl_transaksi`, `tot_bayar`, `stat_order`, `bukti_bayar`) VALUES
@@ -781,7 +780,7 @@ INSERT INTO `transaksi` (`id_transaksi`, `id_pelanggan`, `id_ongkir`, `tgl_trans
 -- --------------------------------------------------------
 
 --
--- Table structure for table `user`
+-- Struktur dari tabel `user`
 --
 
 CREATE TABLE `user` (
@@ -793,7 +792,7 @@ CREATE TABLE `user` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `user`
+-- Dumping data untuk tabel `user`
 --
 
 INSERT INTO `user` (`id_user`, `nama_user`, `username`, `password`, `level_user`) VALUES
@@ -805,101 +804,101 @@ INSERT INTO `user` (`id_user`, `nama_user`, `username`, `password`, `level_user`
 --
 
 --
--- Indexes for table `analisis`
+-- Indeks untuk tabel `analisis`
 --
 ALTER TABLE `analisis`
   ADD PRIMARY KEY (`id_analisis`);
 
 --
--- Indexes for table `detail_transaksi`
+-- Indeks untuk tabel `detail_transaksi`
 --
 ALTER TABLE `detail_transaksi`
   ADD PRIMARY KEY (`id_detail`);
 
 --
--- Indexes for table `diskon`
+-- Indeks untuk tabel `diskon`
 --
 ALTER TABLE `diskon`
   ADD PRIMARY KEY (`id_diskon`);
 
 --
--- Indexes for table `ongkir`
+-- Indeks untuk tabel `ongkir`
 --
 ALTER TABLE `ongkir`
   ADD PRIMARY KEY (`id_ongkir`);
 
 --
--- Indexes for table `pelanggan`
+-- Indeks untuk tabel `pelanggan`
 --
 ALTER TABLE `pelanggan`
   ADD PRIMARY KEY (`id_pelanggan`);
 
 --
--- Indexes for table `produk`
+-- Indeks untuk tabel `produk`
 --
 ALTER TABLE `produk`
   ADD PRIMARY KEY (`id_produk`);
 
 --
--- Indexes for table `transaksi`
+-- Indeks untuk tabel `transaksi`
 --
 ALTER TABLE `transaksi`
   ADD PRIMARY KEY (`id_transaksi`);
 
 --
--- Indexes for table `user`
+-- Indeks untuk tabel `user`
 --
 ALTER TABLE `user`
   ADD PRIMARY KEY (`id_user`);
 
 --
--- AUTO_INCREMENT for dumped tables
+-- AUTO_INCREMENT untuk tabel yang dibuang
 --
 
 --
--- AUTO_INCREMENT for table `analisis`
+-- AUTO_INCREMENT untuk tabel `analisis`
 --
 ALTER TABLE `analisis`
   MODIFY `id_analisis` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=451;
 
 --
--- AUTO_INCREMENT for table `detail_transaksi`
+-- AUTO_INCREMENT untuk tabel `detail_transaksi`
 --
 ALTER TABLE `detail_transaksi`
   MODIFY `id_detail` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
--- AUTO_INCREMENT for table `diskon`
+-- AUTO_INCREMENT untuk tabel `diskon`
 --
 ALTER TABLE `diskon`
   MODIFY `id_diskon` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
--- AUTO_INCREMENT for table `ongkir`
+-- AUTO_INCREMENT untuk tabel `ongkir`
 --
 ALTER TABLE `ongkir`
   MODIFY `id_ongkir` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
--- AUTO_INCREMENT for table `pelanggan`
+-- AUTO_INCREMENT untuk tabel `pelanggan`
 --
 ALTER TABLE `pelanggan`
   MODIFY `id_pelanggan` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
--- AUTO_INCREMENT for table `produk`
+-- AUTO_INCREMENT untuk tabel `produk`
 --
 ALTER TABLE `produk`
   MODIFY `id_produk` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=151;
 
 --
--- AUTO_INCREMENT for table `transaksi`
+-- AUTO_INCREMENT untuk tabel `transaksi`
 --
 ALTER TABLE `transaksi`
   MODIFY `id_transaksi` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
--- AUTO_INCREMENT for table `user`
+-- AUTO_INCREMENT untuk tabel `user`
 --
 ALTER TABLE `user`
   MODIFY `id_user` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;

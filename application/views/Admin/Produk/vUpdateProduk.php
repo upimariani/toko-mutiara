@@ -34,11 +34,7 @@
 							<input type="number" name="harga_supplier" value="<?= $produk->harga_supplier ?>" class="form-control" id="input-4" placeholder="Masukkan Harga">
 							<?= form_error('harga_supplier', '<small class="form-text text-danger">', '</small>'); ?>
 						</div>
-						<!-- <div class="form-group">
-							<label for="input-5">Stok</label>
-							<input type="number" name="stok" value="<?= $produk->stok ?>" class="form-control" id="input-5" placeholder="Masukkan Stok Produk">
-							<?= form_error('stok', '<small class="form-text text-danger">', '</small>'); ?>
-						</div> -->
+						
 						<div class="form-group">
 							<label for="input-5">Gambar</label><br>
 							<img style="width: 150px;" src="<?= base_url('asset/foto-produk/' . $produk->gambar) ?>">

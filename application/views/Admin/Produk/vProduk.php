@@ -31,7 +31,6 @@
 										<th>Gambar</th>
 										<th>Keterangan</th>
 										<th>Harga</th>
-										<!-- <th>Stok</th> -->
 										<th>Actions</th>
 									</tr>
 								</thead>
@@ -54,7 +53,6 @@
 												<?= $value->keterangan ?>
 											</td>
 											<td>Rp. <?= number_format($value->harga, 0) ?></td>
-											<!-- <td><?= $value->stok ?></td> -->
 											<td>
 												<a href="<?= base_url('Admin/cProduk/update/' . $value->id_produk) ?>" class="btn btn-warning"> Edit </a>
 												<a href="<?= base_url('Admin/cProduk/delete/' . $value->id_produk) ?>" class="btn btn-danger"> Hapus </a>

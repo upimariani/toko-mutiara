@@ -28,6 +28,15 @@ class mSegmentasi extends CI_Model
 	{
 		return $this->db->query("SELECT * FROM `analisis` JOIN produk ON produk.id_produk=analisis.id_produk WHERE thn_periode='" . $tahun . "' AND status='" . $status . "'")->result();
 	}
+
+	// INSERT EXCEL
+	public function insertxcell($data)
+	{
+		$insert = $this->db->insert_batch('analisis', $data);
+		if ($insert) {
+			return true;
+		}
+	}
 }
 
 /* End of file mSegmentasi.php */
