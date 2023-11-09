@@ -21,18 +21,7 @@
 				<div class="card">
 					<div class="card-body">
 						<h4 class="card-title">Informasi Produk</h4>
-						<form action="<?= base_url('Admin/cSegmentasi/import_excel'); ?>" method="post" enctype="multipart/form-data">
-							<div class="form-group">
-								<label>Pilih File Excel</label>
-								<input class="form-control" type="file" name="fileExcel">
-							</div>
-							<div>
-								<button class='btn btn-success' type="submit">
-									<span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
-									Import
-								</button>
-							</div>
-						</form>
+
 						</p>
 						<div class="table-responsive">
 							<table id="myTable" class="table table-striped">

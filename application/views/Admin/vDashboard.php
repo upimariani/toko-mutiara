@@ -5,6 +5,8 @@
 
 
 		</div>
+
+
 		<?php
 		if ($this->session->userdata('success')) {
 		?>
@@ -59,7 +61,27 @@
 					</div>
 				</div>
 			</div>
-
+			<div class="col-lg-8 mb-5">
+				<div class="card">
+					<div class="card-header">
+						<p>Import File Analisis Format Excel</p>
+					</div>
+					<div class="card-body">
+						<form action="<?= base_url('Admin/cSegmentasi/import_excel'); ?>" method="post" enctype="multipart/form-data">
+							<div class="form-group">
+								<label>Pilih File Excel</label>
+								<input class="form-control" type="file" name="fileExcel">
+							</div>
+							<div>
+								<button class='btn btn-success' type="submit">
+									<span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+									Import
+								</button>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
 			<div class="col-lg-12 grid-margin stretch-card">
 				<div class="card">
 					<div class="card-body">
